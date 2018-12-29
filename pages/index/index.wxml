@@ -1,0 +1,28 @@
+<!--index.wxml-->
+<view class="index-body">
+
+<!-- 滑动组件-->
+
+
+  <view class="index-nav">
+    <block wx:for="{{navs}}">
+      <view class="nav-item">
+        <image src="{{item.icon}}" class="nav-icon" mode="widthFix"/>
+        <text>{{item.name}}</text>
+      </view>
+    </block>
+  </view>
+
+  <view class="index-section">
+    <view class="section-title">酷得编程教育</view>
+    <view class="section-content">
+      <navigator url="/pages/goods/goods?id={{item.goods_id}}" class="section-item" wx:for="{{newGoods}}">
+        <image src="{{item.thumbnail}}" class="section-img" mode="widthFix"/>
+        <text class="section-name">{{item.goods_name}}</text>
+       
+      </navigator>
+    </view>
+  </view>
+
+  
+</view>
